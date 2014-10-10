@@ -1,21 +1,21 @@
-/*----------------------------------------------------------------------------*/
+/*////////////////////////////////////////////////////////////////////////////*/
 @import "compass/css3";
 
-/*----------------------------------------------------------------------------*/
+/*////////////////////////////////////////////////////////////////////////////*/
 @import "fonts";
 @import "base";
 @import "helpers";
 @import "forms";
 @import "print";
 
-/*----------------------------------------------------------------------------*/
+/*////////////////////////////////////////////////////////////////////////////*/
 @import "vendor/bootstrap.min.css";
 @import "vendor/font-awesome.min.css";
 
 
-/*----------------------------------------------------------------------------*/
+/*////////////////////////////////////////////////////////////////////////////*/
 /* CUSTOM STYLES */
-/*----------------------------------------------------------------------------*/
+/*////////////////////////////////////////////////////////////////////////////*/
 html,body {
     font-family:$normalFont;
     height:100%;
@@ -30,6 +30,17 @@ html,body {
     padding:0;
     margin:0;
     /*word-break:break-all;*/
+}
+
+a {
+    color:$loudColor;
+    text-decoration: underline;
+    @include transition-duration(0.5s);
+
+    &:hover {
+        color: $actionColor;
+    }
+
 }
 
 .jumbo {
@@ -65,11 +76,11 @@ h3 {
     font-family:$highLighterFont;
     text-transform:capitalize;
     font-size:1em;
-    margin:22px 0 5px 0;
-    border-bottom:0px solid $mediumColor;
+    margin:22px 0 9px 0;
     text-transform: uppercase;
     font-size:1.5em;
     padding-bottom:0.2em;
+    border-bottom:1px solid $loudColor;
 }
 
 p {
@@ -126,11 +137,12 @@ a.button {
     padding:22px 14px;
     width:80%;
     font-family:$normalFont;
-    @include opacity(0.8);
+    
     @include transition-duration(0.5s);
 
     &:hover {
-        @include opacity(1);
+
+        background-color: $actionColor;
         /*@include box-shadow(0px 0px 10px -1px $mediumColor);*/
     }
 
@@ -157,9 +169,9 @@ a.button {
     border-bottom:10px solid $mediumColor;
 }
 
-/*----------------------------------------------------------------------------*/
+/*////////////////////////////////////////////////////////////////////////////*/
 /* RESPONSIVE */
-/*----------------------------------------------------------------------------*/
+/*////////////////////////////////////////////////////////////////////////////*/
 @media screen and (max-width: $break-small) {
 
     html,body {
