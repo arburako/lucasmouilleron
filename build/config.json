@@ -1,0 +1,7 @@
+{
+  "host":"lucasmouilleron.com",
+  "baseURL":"/",
+  "homeURL": "http://lucasmouilleron.com",
+  "sassDir":"../assets/css",
+  "cssDir":"../assets/css"
+}
